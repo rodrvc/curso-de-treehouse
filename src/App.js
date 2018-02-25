@@ -23,17 +23,10 @@ class App extends Component {
         ]
     }
 
-    ToggleConfirmationAt = indexOfguest =>
-        this.setState( this.state.guests.map((guest , index) => {
-            if(index === indexOfguest){
-                return {
-                ...guest,
-                inConfirmed: !guest.inConfirmed
-                }
-            }
-               return guest;
-        })
-    );
+
+///la siguiente funcion nos demuestra como dibidir una array de objetos y dividirlos en peque;as trozos con propiedades modificables
+
+
 
 
     getTotalInvited = () => this.state.guests.length ;
@@ -83,7 +76,8 @@ class App extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <GuestList guests={this.state.guests} />
+                <GuestList guests={this.state.guests}
+                 />
             </div>
         </div>);
     }

@@ -8,7 +8,9 @@ const Guest = props =>
 <li>
     <span>{props.name}</span>
     <label>
-        <input type="checkbox" checked={props.isConfirmed}/>
+        <input type="checkbox"
+              checked={props.isConfirmed}
+              />
         Confirmed
     </label>
     <button>edit</button>
@@ -17,7 +19,7 @@ const Guest = props =>
 
 Guest.propTypes = {
     name: PropTypes.string.isRequired,
-    isConfirmed: PropTypes.bool.isRequired
+    isConfirmed: PropTypes.bool.isRequired,
 }
 
 

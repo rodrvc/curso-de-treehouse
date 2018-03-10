@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const GuestsList = props =>
 <ul>
     {
-        
+        props.guests(
     <li>
         <span key={props.guests}>hola</span>
         <label>
@@ -16,6 +16,7 @@ const GuestsList = props =>
         <button>edit</button>
         <button>remove</button>
     </li>
+)
 }
 
 

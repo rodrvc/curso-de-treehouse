@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './index.css';
-import GuestList from './guestList.js'
+import GuestsList from './guestList'
+
 
 
 class App extends Component {
@@ -24,7 +25,9 @@ class App extends Component {
     }
 
 
-///la siguiente funcion nos demuestra como dibidir una array de objetos y dividirlos en peque;as trozos con propiedades modificables
+///la siguiente funcion nos demuestra como dividir una array de objetos y dividirlos en peque;as trozos con propiedades modificables
+
+
 
 
 
@@ -76,8 +79,9 @@ class App extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <GuestList guests={this.state.guests}
-                 />
+                <GuestsList />
+
+
             </div>
         </div>);
     }

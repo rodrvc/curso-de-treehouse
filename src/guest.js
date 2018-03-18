@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const Guest = props =>
 
-  <li key={index}>
-      <span >{guest.name}</span>
+  <li>
+      <span >{props.guest}</span>
       <label>
           <input type="checkbox"/>
           Confirmed
@@ -15,7 +15,7 @@ const Guest = props =>
   </li>
 
   Guest.propTypes = {
-      name: PropTypes.array.isRequired
+      guest: PropTypes.array.isRequired
   }
 
   export default Guest

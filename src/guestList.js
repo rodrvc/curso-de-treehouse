@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Guest from './guests.js'
+import Guest from './guest.js'
 
 
 
@@ -11,12 +11,7 @@ const GuestsList = props =>
     {
 
      props.guests.map((guest, index) =>
-     <Guest guest={name.guest}/>
-
-
-
-
-
+     <Guest guest={guest.name}/>
  )
 }
 

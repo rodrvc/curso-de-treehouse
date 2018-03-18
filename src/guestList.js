@@ -11,7 +11,7 @@ const GuestsList = props =>
     {
 
      props.guests.map((guest, index) =>
-     <Guest guest={props.guests}/>
+     <Guest guest={name.guest}/>
 
 
 

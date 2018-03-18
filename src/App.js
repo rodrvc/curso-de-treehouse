@@ -6,6 +6,7 @@ import GuestsList from './guestList'
 
 
 
+
 class App extends Component {
 
     state = {
@@ -36,6 +37,15 @@ class App extends Component {
 
     //getAttendedguests = () => ()
     // getUnconfirmated = () => ()
+   // PrincipalGUests = index =>
+   //    this.setState({
+   //         guests: this.state.guests.map((guest , index)=>
+   //          ...guest,
+   //          isConfirmed: this.state.!isConfirmed;
+   //
+   //     )
+   // });
+
 
 
 
@@ -79,7 +89,7 @@ class App extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <GuestsList />
+                <GuestsList guests={this.state.guests} />
 
 
             </div>

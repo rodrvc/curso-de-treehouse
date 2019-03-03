@@ -14,7 +14,9 @@ const GuestsList = props =>
      <Guest
       key = {index}
       name={guest.name}
-      isEditing={guest.toggleEditing}
+      isConfirmed={guest.inConfirmed}
+      ToggleConfirmed={() => props.toogleConfirmationAt(index)}
+
 
          />
  )
@@ -24,8 +26,10 @@ const GuestsList = props =>
 </ul>;
 
 GuestsList.propTypes = {
-    guests: PropTypes.array.isRequired
-    toggleEditing: PropTypes.bool.isRequired
+    guests: PropTypes.array.isRequired,
+    toogleConfirmationAt: PropTypes.func.isRequired
+
+
 
 }
 

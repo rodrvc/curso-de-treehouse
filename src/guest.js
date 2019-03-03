@@ -7,17 +7,18 @@ const Guest = props =>
   <li>
       <span >{props.name}</span>
       <label>
-          <input type="checkbox"/>
+          <input type="checkbox" checked={props.isConfirmed}
+              onChange={props.ToggleConfirmed}/>
           Confirmed
       </label>
-      <button onClinck={e => props.isEditing} >edit</button>
+      <button>edit</button>
       <button>remove</button>
   </li>
 
   Guest.propTypes = {
       name: PropTypes.string.isRequired,
-      isEditing: PropTypes.bool.isRequired
-
+      isConfirmed: PropTypes.bool.isRequired,
+      ToggleConfirmed: PropTypes.func.isRequired
   }
 
   export default Guest

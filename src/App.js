@@ -12,29 +12,46 @@ class App extends Component {
     state = {
         guests: [{
             name: 'teasure',
-            inConfirmed: false
+            inConfirmed: false,
+            isEditing: false
         },
             {
             name: 'jorge ',
-            inConfirmed: true
+            inConfirmed: true,
+            isEditing: false
         },
             {
             name: 'Armando Casas',
-            inConfirmed: true
+            inConfirmed: false,
+            isEditing: false
             }
         ]
     }
 
 
+   ToggleConfirmedAt = indexToChange =>
+       this.setState({ guests: this.state.guests.map((guest , index) =>{
+           if(indexToChange === index ) {
+               return{
+                   ...guest,
+                   inConfirmed :!guest.inConfirmed
+               }
+           }
+           return guest ;
+       } )
+   });
+
+
+
 ///la siguiente funcion nos demuestra como dividir una array de objetos y dividirlos en peque;as trozos con propiedades modificables
 
-    isEditing = () => this.setState.guests.map((isTheSame , index ) =>
-    if(isTheSame === index) {
-    guests: this.state.guest(this.state.guest.isConfirmed )
-
-    }
-
-   )
+   //  isEditing = () => this.setState.guests.map((isTheSame , index ) =>
+   //  if(isTheSame === index) {
+   //  guests: this.state.guests (this.state.guest.isConfirmed )
+   //
+   //  }
+   //
+   // )
 
 
 
@@ -97,7 +114,9 @@ class App extends Component {
                 </table>
                 <GuestsList
                  guests={this.state.guests}
-                 toggleEditing={this.isEditing }
+                 toogleConfirmationAt= {this.ToggleConfirmedAt}
+
+
 
               />
 

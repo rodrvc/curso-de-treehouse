@@ -5,17 +5,19 @@ import PropTypes from 'prop-types';
 const Guest = props =>
 
   <li>
-      <span >{props.guest}</span>
+      <span >{props.name}</span>
       <label>
           <input type="checkbox"/>
           Confirmed
       </label>
-      <button>edit</button>
+      <button onClinck={e => props.isEditing} >edit</button>
       <button>remove</button>
   </li>
 
   Guest.propTypes = {
-      guest: PropTypes.array.isRequired
+      name: PropTypes.string.isRequired,
+      isEditing: PropTypes.bool.isRequired
+
   }
 
   export default Guest

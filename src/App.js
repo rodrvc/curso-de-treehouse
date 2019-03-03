@@ -28,7 +28,13 @@ class App extends Component {
 
 ///la siguiente funcion nos demuestra como dividir una array de objetos y dividirlos en peque;as trozos con propiedades modificables
 
+    isEditing = () => this.setState.guests.map((isTheSame , index ) =>
+    if(isTheSame === index) {
+    guests: this.state.guest(this.state.guest.isConfirmed )
 
+    }
+
+   )
 
 
 
@@ -89,7 +95,11 @@ class App extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <GuestsList guests={this.state.guests} />
+                <GuestsList
+                 guests={this.state.guests}
+                 toggleEditing={this.isEditing }
+
+              />
 
 
             </div>

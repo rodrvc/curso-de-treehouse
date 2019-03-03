@@ -11,7 +11,12 @@ const GuestsList = props =>
     {
 
      props.guests.map((guest, index) =>
-     <Guest guest={guest.name}/>
+     <Guest
+      key = {index}
+      name={guest.name}
+      isEditing={guest.toggleEditing}
+
+         />
  )
 }
 
@@ -20,6 +25,7 @@ const GuestsList = props =>
 
 GuestsList.propTypes = {
     guests: PropTypes.array.isRequired
+    toggleEditing: PropTypes.bool.isRequired
 
 }
 
